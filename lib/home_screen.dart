@@ -44,7 +44,7 @@ class Home extends StatelessWidget {
             ),
             const Padding(
               padding: EdgeInsets.all(ConstSizes.defaultSpace),
-              child: CarouselPromoSlider(banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3]),
+              child: CarouselPromoSlider(banners: [TImages.banner1, TImages.banner2, TImages.banner2]),
             ),
           ],
         ),
