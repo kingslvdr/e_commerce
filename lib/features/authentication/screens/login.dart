@@ -57,6 +57,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: ConstSizes.spaceBtwInputFields,),
                       TextFormField(
+                        obscureText: true,
                         decoration: const InputDecoration(
                           prefixIcon: Icon(Iconsax.password_check),
                           labelText: TTexts.password,
@@ -70,8 +71,10 @@ class LoginScreen extends StatelessWidget {
                           Row(
                             children: [
                               Checkbox(
-                                value: true, 
-                                onChanged: (value){},
+                                value: true,
+                                onChanged: (value){
+
+                                },
                               ),
                               const Text(TTexts.rememberMe),
                             ],
@@ -89,7 +92,7 @@ class LoginScreen extends StatelessWidget {
                         width: double.infinity,
                         child: ElevatedButton(
                           onPressed: (){
-                            Get.to(const BottomNav());
+                            Get.to(() => const BottomNav());
                           }, 
                           child: const Text(TTexts.signIn),
                         ),
@@ -99,7 +102,7 @@ class LoginScreen extends StatelessWidget {
                         width: double.infinity,
                         child: OutlinedButton(
                           onPressed: (){
-                            Get.to( const SignUpScreen());
+                            Get.to( () => const SignUpScreen());
                           }, 
                           child: const Text(TTexts.createAccount),
                         ),
